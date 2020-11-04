@@ -18,7 +18,8 @@ export default StyleSheet.create({
     
     rootFlatList: {
         marginLeft: 24,
-        marginTop: 24
+        marginTop: 24,
+        marginBottom: 18
     },
     
 })

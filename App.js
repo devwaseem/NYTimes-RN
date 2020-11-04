@@ -7,6 +7,7 @@ import SignUpScreen from './Modules/Auth/SignUpScreen';
 import HomeScreen from './Modules/Home/HomeScreen';
 import NewsHomeScreen from './Modules/News/HomeScreen';
 import NewsDetailScreen from './Modules/News/NewsDetailScreen';
+import BookmarkScreen from './Modules/Bookmarks/BookmarkScreen';
 
 
 const RootStack = createStackNavigator()
@@ -38,7 +39,12 @@ const App = () => {
       <RootStack.Screen 
       name="NewsDetailScreen" 
       component={NewsDetailScreen}
-      options={{headerShown: true, gestureEnabled:true, title:""}} 
+      options={{headerShown: false, gestureEnabled:true, title:""}} 
+      />
+      <RootStack.Screen 
+      name="BookmarksScreen" 
+      component={BookmarkScreen}
+      options={{headerShown: false, gestureEnabled:true, title:""}} 
       />
     </RootStack.Navigator>
   </NavigationContainer>

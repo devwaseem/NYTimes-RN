@@ -6,6 +6,7 @@ class NYTimesTopStory {
         date: string
         url:string
         imageUrl:string
+        bookmarked: boolean
 
         constructor(section: string,title: string, author: string, date: string, url: string, imageUrl:string) {
             this.section = section
@@ -14,19 +15,11 @@ class NYTimesTopStory {
             this.date = date
             this.imageUrl = imageUrl
             this.url = url
+            this.bookmarked = false
         }
 
-}
-
-class NYTimesGroupedTopStories {
-    section: string
-    stories: NYTimesTopStory[]
-
-    constructor(section: string, stories: NYTimesTopStory[]) {
-        this.section = section
-        this.stories = stories
-    }
 
 }
 
-export { NYTimesTopStory,  NYTimesGroupedTopStories}
+
+export { NYTimesTopStory }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {NYTimesTopStory, NYTimesGroupedTopStories} from '../Models/NYTimesModels'
+import {NYTimesTopStory} from '../Models/NYTimesModels'
 
 
 
@@ -18,7 +18,7 @@ export class NYTimesApiService {
         return this.baseUrl + `svc/topstories/v2/${section}.json`
     }
 
-    async getSectionData(section: string) {
+    async getSectionData(section: string): Promise<NYTimesTopStory[]> {
         let url = this.getSectionUrl(section)
         try {
             let response = await axios.get(url, {
